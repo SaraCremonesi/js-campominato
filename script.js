@@ -12,4 +12,13 @@ for (var i = 0; i < 16; i++) {
   var numeroGenerato = Math.floor(Math.random() * 100 + 1);
   numeriRandom.push(numeroGenerato);
 };
-console.log(numeriRandom);
+console.log('I numeri generati sono:' , numeriRandom);
+
+for (var i = 0; i < 16; i++) {
+  if (numeroInserito != numeriRandom[i]) {
+    numeroInserito = parseInt(prompt('Sei ancora in gioco. Inserisci un altro numero da 1 a 100'));
+  } else {
+    var messaggio = 'Hai perso';
+    console.log(messaggio);
+  };
+};
