@@ -21,9 +21,11 @@ while (i < 16 && numeroProibito === false) {
   // altrimenti incremento il contatore per calcolare successivamente il punteggio
   if (verificaPresenza(numeroInserito, arrayNumeriRandom) === true) {
     numeroProibito = true;
+  } else if (isNaN(numeroInserito) || numeroInserito === '') {
+    numeroInserito = parseInt(prompt('Inserimento non valido. Inserisci un numero da 1 a 100'));
   } else {
     i++;
-  };
+  }
 };
 
 // Creo un ciclo if per stampare a video il messaggio
